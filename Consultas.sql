@@ -1,5 +1,5 @@
 CONSULTA PARA ACUDIENTE
-1.	select e.identificacion,e,nombre_est, e.nombre2_est,e.apellido_est,e.apellido2_est,e.curso,i.materia,i.nota,grado,i.identificacion_es from estudiante e inner join estudiante_estado_academico es on es.id_estudiante=e.id inner join estado_academico i on i.id=es.id_estado
+1.	select e.identificacion,e.nombre_est, e.nombre2_est,e.apellido_est,e.apellido2_est,e.curso,i.materia,i.nota,grado,i.identificacion_es from estudiante e inner join estudiante_estado_academico es on es.id_estudiante=e.id inner join estado_academico i on i.id=es.id_estado
 // MUESTRA LOS DATOS DEL ESTUDIANTE Y SU ESTADO ACADÉMICO POR MATERIA//
 2.	select * from actividades
 // MUESTRA LAS ACTIVIDADES CURRICULARES Y EXTRACURRICULARES DE LA INSTITUCIÓN EDUCATIVA//

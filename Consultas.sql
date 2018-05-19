@@ -21,11 +21,6 @@ SELECT  identificacion, nombre_est, nombre2_est, apellido_est, apellido2_est, cu
 
 //MUESTRA AL ESTUDIANTE SEGÚN SU PRIMER APELLIDO//
 
-7.	
-select e.identificacion,nombre_1, nombre_2,apellido_1,apellido_2,curso,i.falta,fecha,grado,identificacion_es from estudiante e inner join estudiante_informacion es on es.id_estudiante=e.id inner join llamados_atencion i on i.id=es.id_informacion
-
-//MUESTRA LOS DATOS DEL ESTUDIANTE Y LOS LLAMADOS DE ATENCIÓN QUE TIENE//
-
 
 CONSULTA PARA PROFESORES
 1.	Select * from estudiante 

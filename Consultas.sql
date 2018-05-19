@@ -1,30 +1,30 @@
 CONSULTA PARA ACUDIENTE
-1.	select e.identificacion,nombre_1, nombre_2,apellido_1,apellido_2,curso,i.materia,nota,grado,identificacion_es from estudiante e inner join estudiante_estado_academico es on es.id_estudiante=e.id inner join estado_academico i on i.id=es.id_estado
-// MUESTRA LOS DATOS DEL ESTUDIANTE Y SU ESTADO ACAD…MICO POR MATERIA//
+1.	select e.identificacion,e,nombre_est, e.nombre2_est,e.apellido_est,e.apellido2_est,e.curso,i.materia,i.nota,grado,i.identificacion_es from estudiante e inner join estudiante_estado_academico es on es.id_estudiante=e.id inner join estado_academico i on i.id=es.id_estado
+// MUESTRA LOS DATOS DEL ESTUDIANTE Y SU ESTADO ACAD√âMICO POR MATERIA//
 2.	select * from actividades
-// MUESTRA LAS ACTIVIDADES CURRICULARES Y EXTRACURRICULARES DE LA INSTITUCI”N EDUCATIVA//
+// MUESTRA LAS ACTIVIDADES CURRICULARES Y EXTRACURRICULARES DE LA INSTITUCI√ìN EDUCATIVA//
 3.	
 SELECT e.id, e.nombre, e.fecha, e.descripcion	,e.tipo, e.id_estudiante, p.nombre_est, p.apellido_est,p.curso  FROM actividades e inner join estudiante p on e.id_estudiante=p.id_estudiante
 //MUESTRA LAS ACTIVIDADES CURRICULARES Y EXTRACURRICULARES POR ESTUDIANTE, VISTA DEL ACUDIENTE//
 
 4.	
 SELECT e.id, e.falta, e.fecha, e.grado, e.id_estudiante, p.nombre_est, p.apellido_est,p.curso  FROM llamados_atencion e inner join estudiante p on e.id_estudiante=p.id_estudiante
-//MUESTRA LOS LLAMADOS DE ATENCI”N IDENTIFICANDO EL ESTUDIANTE//
+//MUESTRA LOS LLAMADOS DE ATENCI√ìN IDENTIFICANDO EL ESTUDIANTE//
 
 5.	
 SELECT e.id_estado,e.materias,e.nota,e.grado, e.id_estudiante, p.nombre_est, p.apellido_est,p.curso  FROM estado_academico e
      inner join estudiante p on e.id_estudiante=p.id_estudiante
-//MUESTRA EL ESTADO AC¡DEMICO DEL ESTUDIANTE POR MATERIA//
+//MUESTRA EL ESTADO AC√ÅDEMICO DEL ESTUDIANTE POR MATERIA//
 
 6.	
 SELECT  identificacion, nombre_est, nombre2_est, apellido_est, apellido2_est, curso FROM estudiante WHERE apellido_est="Perez"
 
-//MUESTRA AL ESTUDIANTE SEG⁄N SU PRIMER APELLIDO//
+//MUESTRA AL ESTUDIANTE SEG√öN SU PRIMER APELLIDO//
 
 7.	
 select e.identificacion,nombre_1, nombre_2,apellido_1,apellido_2,curso,i.falta,fecha,grado,identificacion_es from estudiante e inner join estudiante_informacion es on es.id_estudiante=e.id inner join llamados_atencion i on i.id=es.id_informacion
 
-//MUESTRA LOS DATOS DEL ESTUDIANTE Y LOS LLAMADOS DE ATENCI”N QUE TIENE//
+//MUESTRA LOS DATOS DEL ESTUDIANTE Y LOS LLAMADOS DE ATENCI√ìN QUE TIENE//
 
 
 CONSULTA PARA PROFESORES
@@ -41,7 +41,7 @@ SELECT e.id_estudiante, e.identificacion, e.nombre_est, e.nombre2_est, e.apellid
 //MUESTRA LOS DATOS DEL ESTUDIANTE CON SU RESPECTIVO ACUDIENTE//
 4.	
 SELECT identificacion, nombre_pro, nombre2_pro, apellido_pro ,apellido2_pro, cargo_aca FROM profesores WHERE id_profesores=1 
-//ARROJA LOS DATOS DEL PROFESOR Y SU CARGO ACAD…MICO SEG⁄N SU ID//
+//ARROJA LOS DATOS DEL PROFESOR Y SU CARGO ACAD√âMICO SEG√öN SU ID//
 
 
 CONSULTA PARA ADMINISTRATIVOS
@@ -49,12 +49,12 @@ CONSULTA PARA ADMINISTRATIVOS
 SELECT e.id, e.falta, e.fecha, e.grado, e.id_estudiante, p.nombre_est, p.apellido_est,p.curso  FROM llamados_atencion e
  inner join estudiante p on e.id_estudiante=p.id_estudiante
 
-//MUESTRA LOS DATOS DEL ESTUDIANTE Y LOS LLAMADOS DE ATENCI”N QUE TIENE//
+//MUESTRA LOS DATOS DEL ESTUDIANTE Y LOS LLAMADOS DE ATENCI√ìN QUE TIENE//
 
 2.	
 SELECT nombre_pro, nombre2_pro, apellido_pro, apellido2_pro, cargo_aca FROM profesores
 
-//MUESTRA LOS DATOS DEL DOCENTE Y SU CARGO ACAD…MICO// 
+//MUESTRA LOS DATOS DEL DOCENTE Y SU CARGO ACAD√âMICO// 
 
 3.	
 
@@ -65,7 +65,7 @@ SELECT m.id_materia, m.nombre_mate, m.id_estudiante,m.id_profesores, e.nombre_es
 
 4.	
 SELECT identificacion, nombre_pro, nombre2_pro, apellido_pro, apellido2_pro, cargo_aca FROM profesores WHERE id_profesores=1 
-//ARROJA LOS DATOS DEL PROFESOR Y SU CARGO ACAD…MICO SEG⁄N SU ID//
+//ARROJA LOS DATOS DEL PROFESOR Y SU CARGO ACAD√âMICO SEG√öN SU ID//
 
 
 5.	
